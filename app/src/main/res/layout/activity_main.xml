@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.spenseapp.spensebankingappdemo.widget.CustomSwipeToRefresh
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/scroll_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/top_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/sw420dp_16dp_v2"
+                        android:background="@color/dashboard_pending_main">
+                        <TextView
+                            android:id="@+id/heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hi Kumar Prajjwal,"
+                            android:textSize="@dimen/sw420sp_16sp_v2"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_semi_bold"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/balance_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/heading"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/sw420dp_16dp_v2"
+                            app:cardCornerRadius="@dimen/sw420dp_16dp_v2">
+                            <RelativeLayout
+                                android:id="@+id/secondary_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/dashboard_pending_secondary"
+                                android:paddingHorizontal="@dimen/sw420dp_16dp_v2">
+
+                                <TextView
+                                    android:id="@+id/balance_header"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="My Saving Account"
+                                    android:layout_marginTop="@dimen/sw420dp_8dp_v2"
+                                    android:textSize="@dimen/sw420sp_14sp_v2"
+                                    android:textColor="@color/white"
+                                    android:fontFamily="@font/poppins_regular" />
+
+                                <TextView
+                                    android:id="@+id/available_balance_header"
+                                    android:layout_below="@+id/balance_header"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Available Balance"
+                                    android:layout_marginTop="@dimen/sw420dp_8dp_v2"
+                                    android:layout_centerHorizontal="true"
+                                    android:textSize="@dimen/sw420sp_12sp_v2"
+                                    android:textColor="@color/white"
+                                    android:fontFamily="@font/poppins_regular" />
+
+
+
+
+                                <TextView
+                                    android:id="@+id/balance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/zero_with_rupee_symbol"
+                                    android:layout_below="@+id/available_balance_header"
+                                    android:layout_marginTop="@dimen/sw420dp_4dp_v2"
+                                    android:textSize="@dimen/sw420sp_20sp_v2"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="@color/white"
+                                    android:layout_marginBottom="@dimen/sw420dp_16dp_v2"
+                                    android:fontFamily="@font/poppins_regular" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_below="@id/top_layout"
+                        android:layout_marginTop="@dimen/sw420dp_20dp_v2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/sw420dp_310dp_v2"
+                        android:src="@drawable/coming_soon"
+                        />
+
+
+
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+        </com.spenseapp.spensebankingappdemo.widget.CustomSwipeToRefresh>
+
+
+
+    </RelativeLayout>
+</layout>
+
+
+    <!--
+    <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Banking Demo App!"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/sw420dp_16dp_v2"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins_semi_bold"/>
+        <TextView
+            android:id="@+id/live_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank Live Status"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/sw420dp_16dp_v2"
+            android:textSize="14sp"
+            android:layout_below="@+id/heading"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingHorizontal="20dp"/>
+        <TextView
+            android:id="@+id/live_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/sw420dp_30dp_v2"
+            android:text="PENDING"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_below="@+id/live_heading"
+            android:textColor="@color/yellow_800"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@color/yellow_100"
+            android:paddingHorizontal="20dp"/>]
+        <ImageView
+            android:id="@+id/refresh"
+            android:layout_width="@dimen/sw420dp_30dp_v2"
+            android:layout_height="@dimen/sw420dp_30dp_v2"
+            android:padding="6dp"
+            android:layout_marginEnd="@dimen/sw420dp_8dp_v2"
+            android:src="@drawable/refresh"
+            android:layout_below="@+id/live_heading"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+
+            android:id="@+id/banking"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sw420dp_50dp_v2"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:background="@color/button_background_add_new_goal"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:paddingHorizontal="@dimen/sw420dp_16dp_v2"
+            android:paddingVertical="@dimen/sw420dp_8dp_v2"
+            android:text="Open Banking SDK"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/balance_card"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/sw420dp_50dp_v2"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_below="@+id/live_status"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/sw420dp_16dp_v2"
+            app:cardCornerRadius="@dimen/sw420dp_8dp_v2">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/alpha_card_color"
+                android:paddingHorizontal="@dimen/sw420dp_20dp_v2">
+
+                <TextView
+                    android:id="@+id/balance_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Balance"
+                    android:layout_marginTop="@dimen/sw420dp_8dp_v2"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <TextView
+                    android:id="@+id/balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. "
+                    android:layout_below="@+id/balance_header"
+                    android:layout_marginTop="@dimen/sw420dp_8dp_v2"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="@dimen/sw420dp_8dp_v2"
+                    android:fontFamily="@font/poppins_regular" />
+
+
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    -->

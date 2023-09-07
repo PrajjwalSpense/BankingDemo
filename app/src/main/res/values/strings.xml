@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SpenseBankingAppDemo</string>
+    <string name="zero_with_rupee_symbol">₹0</string>
+    <string name="amount">₹%1$s</string>
+    <string name="secret_key">163BfPx2nLP4zFRW0ySOYsOxyilHh670</string>
+    <string name="api_key">z77hTtTwnP3aOFiP1bXMQZ6MKlx6y7Wy</string>
+</resources>
